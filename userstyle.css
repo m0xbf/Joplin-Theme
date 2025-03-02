@@ -1,0 +1,64 @@
+/* 修改注释行（以 > 开头的行）的背景颜色 */
+blockquote {
+    background-color: #f0f0f0 !important; /* 浅灰色背景 */
+    border-left: 3px solid #ccc !important; /* 添加左侧边框 */
+    margin: 8px 0 !important; /* 调整外边距 */
+}
+
+/* 修改 blockquote 内部的 p 标签 */
+blockquote p {
+    margin: 0 !important; /* 移除 p 标签的默认外边距 */
+    padding: 4px !important; /* 设置 p 标签的内边距 */
+}
+
+/* 多行代码块（pre 标签）的样式 */
+pre {
+    font-family: "JetBrains Mono", monospace !important; /* 使用 JetBrains Mono 字体 */
+    font-size: 15px !important; /* 调整字体大小 */
+    font-style: normal !important; /* 强制设置为正常字体 */
+    background-color: #f8f8f8 !important; /* 背景颜色 */
+    border: 1px solid #ddd !important; /* 添加边框 */
+    border-radius: 4px !important; /* 圆角边框 */
+    padding: 12px !important; /* 内边距 */
+    margin: 8px 0 !important; /* 外边距 */
+    overflow-x: auto !important; /* 超出部分显示滚动条 */
+}
+
+/* 多行代码块内部的 code 标签 */
+pre code {
+    font-style: normal !important; /* 强制设置为正常字体 */
+    font-family: "JetBrains Mono", monospace !important; /* 确保字体一致 */
+    padding: 0 !important; /* 移除内边距 */
+}
+
+/* 单行代码（code 标签）的样式 */
+code {
+    font-family: "JetBrains Mono", monospace !important; /* 使用 JetBrains Mono 字体 */
+    font-style: italic !important; /* 设置为斜体 */
+    font-size: 15px !important; /* 调整字体大小 */
+    background-color: #f8f8f8 !important; /* 背景颜色 */
+    padding: 2px 4px !important; /* 内边距 */
+    border-radius: 3px !important; /* 圆角 */
+}
+
+/* 修改所有标题（h1 到 h6）的颜色和字体 */
+h1, h2, h3, h4, h5, h6 {
+    color: #6ab0de !important; /* 浅蓝色 */
+    font-family: "Arial", sans-serif !important; /* 修改字体 */
+    font-weight: bold !important; /* 加粗 */
+}
+
+/* 一级标题样式 */
+h1 {
+    border-bottom: 2px solid #6ab0de !important; /* 添加下划线 */
+    padding-bottom: 4px !important; /* 下划线与文字的间距 */
+    margin-bottom: 35px !important; /* 添加下边距 */
+}
+
+/* 二级标题样式 */
+h2 {
+    border-bottom: 2px solid #6ab0de !important; /* 添加下划线 */
+    padding-bottom: 4px !important; /* 下划线与文字的间距 */
+    margin-top: 55px !important; /* 添加上边距 */
+    margin-bottom: 35px !important; /* 添加下边距 */
+}
