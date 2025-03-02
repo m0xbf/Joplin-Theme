@@ -44,7 +44,7 @@ code {
 /* 修改所有标题（h1 到 h6）的颜色和字体 */
 h1, h2, h3, h4, h5, h6 {
     color: #6ab0de !important; /* 浅蓝色 */
-    font-family: "Arial", sans-serif !important; /* 修改字体 */
+    font-family: "Noto Sans CJK SC", sans-serif !important; /* 修改字体 */
     font-weight: bold !important; /* 加粗 */
 }
 
