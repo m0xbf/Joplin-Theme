@@ -62,3 +62,88 @@ h2 {
     margin-top: 55px !important; /* 添加上边距 */
     margin-bottom: 35px !important; /* 添加下边距 */
 }
+
+/* 设置目录导航栏的 ul 列表样式 */
+nav.table-of-contents ul {
+    list-style-type: none; /* 去掉列表的默认符号（如圆点） */
+    margin-top: 0px; /* 上边距为 0 */
+    margin-bottom: 0px; /* 下边距为 0 */
+}
+
+/* 设置目录导航栏的主 ul 容器样式 */
+nav.table-of-contents>ul {
+    top: 5px; /* 距离顶部 5px */
+    right: 0px; /* 距离右侧 0px */
+    z-index: 99; /* 设置层级，确保目录在最上层 */
+
+    font-size: 14px; /* 增大字体大小 */
+    position: fixed; /* 固定定位 */
+    padding: 15px; /* 内边距 */
+
+    border-radius: 10px 0px 0px 10px; /* 左上角和左下角圆角 */
+    margin: 0px; /* 外边距为 0 */
+
+    overflow: hidden; /* 隐藏超出部分 */
+    height: 90%; /* 高度为视口的 90% */
+    width: 5px; /* 默认宽度为 5px（隐藏状态） */
+    transition: .2s; /* 添加 0.2 秒的过渡效果 */
+}
+
+/* 在目录导航栏后添加伪元素，显示提示文字 */
+nav.table-of-contents::after {
+    content: "[目录 - 请将你的鼠标移至程序的右边]"; /* 提示文字 */
+    color: black; /* 文字颜色 */
+    font-size: 12px; /* 提示文字字体大小 */
+}
+
+/* 当鼠标悬停在目录导航栏的 ul 容器上时的样式 */
+nav.table-of-contents>ul:hover {
+    background: #F8F8F8; /* 背景颜色 */
+    box-shadow: -5px 0px 10px 0px rgba(0,0,0,0.15); /* 添加阴影 */
+
+    width: 30%; /* 展开后的宽度为视口的 30% */
+    overflow: scroll; /* 添加滚动条 */
+}
+
+/* 当鼠标悬停在目录导航栏的 ul 容器上时，添加伪元素显示“目录”文字 */
+nav.table-of-contents>ul:hover::before {
+    content: "目录"; /* 显示的文字 */
+    font-size: 14px; /* 字体大小 */
+    font-weight: bold; /* 加粗 */
+    display: block; /* 块级显示 */
+    margin-bottom: 10px; /* 下边距 */
+}
+
+/* 当鼠标悬停在目录导航栏的 ul 容器上时，显示 li 列表项 */
+nav.table-of-contents>ul:hover li {
+    display: list-item; /* 显示列表项 */
+}
+
+/* 设置目录导航栏的 li 列表项样式 */
+nav.table-of-contents li {
+    display: none; /* 默认隐藏列表项 */
+    white-space: nowrap; /* 禁止文字换行 */
+    overflow: hidden; /* 隐藏超出部分 */
+    margin: 0px; /* 外边距为 0 */
+    padding: 0px; /* 内边距为 0 */
+}
+
+/* 设置目录导航栏的链接样式 */
+nav.table-of-contents a {
+    text-decoration: none; /* 去掉下划线 */
+    color: #6ab0de; /* 链接颜色 */
+    font-size: 14px; /* 字体大小 */
+    display: block; /* 块级显示 */
+    padding: 4px 0; /* 内边距 */
+}
+
+/* 鼠标悬停时链接的样式 */
+nav.table-of-contents a:hover {
+    color: #4a90e2; /* 悬停颜色 */
+    text-decoration: underline; /* 添加下划线 */
+}
+
+/* 设置渲染内容的宽度 */
+#rendered-md {
+    width: 100%; /* 宽度为 100% */
+}
